@@ -7,8 +7,7 @@ export class TaskList {
     }
 
     addTask(text) {
-        this.id++;
-        const task = new Task(this.id, text);
+        const task = new Task(this.id++, text);
         this.tasks.push(task);
     }
 
