@@ -3,11 +3,12 @@ import { Task } from "./Task.js";
 export class TaskList {
     constructor() {
         this.tasks = [];
+        this.id = 0;
     }
 
     addTask(text) {
-        const id = this.tasks.length + 1;
-        const task = new Task(id, text);
+        this.id++;
+        const task = new Task(this.id, text);
         this.tasks.push(task);
     }
 
