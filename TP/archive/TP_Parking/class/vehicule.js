@@ -5,8 +5,9 @@ export class Vehicule {
         this.historique = [] ;
     }
     
-    set heureArrivee(date) { this.heureArr = date }
-
+    get heureArrivee() {return this.heureArr};
+    set heureArrivee(date) { this.heureArr = date };
+    
     archive() {
         this.historique.push( {
             dateIn : this.heureArr ,

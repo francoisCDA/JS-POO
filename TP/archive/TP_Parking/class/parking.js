@@ -2,37 +2,31 @@ import { Vehicule } from "./vehicule.js";
 import { Tarif } from "./tarifs.js";
 
 
+
 export class Parking {
     constructor() {
         this.listVoiture = [] ;
     }
 
-    knowCar(num) {
-        // for (let i = 0 ; i < this.listVoiture.length ; i++) {
-        //     if (this.listVoiture[i].plaque == num) {
-        //         return i;
-        //     } ;
-        // }
-            
+    knowCar(num) {          
         return this.listVoiture.findIndex((car) => car.plaque == num) ;
     }
 
-    parkCar(num) {
-        return this.listVoiture[this.knowCar].heureArr == '' ? false : true ;
+    actualParkCar(num) {
+        return this.listVoiture[this.knowCar(num)].heureArr == '' ? false : true ;
     }
 
     addCar(num) {
         this.listVoiture.push( new Vehicule(num) ) ;
-        console.log(this.listVoiture) ;
+        this.updateCar(num);
     }
 
     updateCar(num) {
-        this.listVoiture[this.knowCar(num)].heureArrivee(new Date) ;
+        this.listVoiture[this.knowCar(num)].heureArrivee = new Date ;
     }
 
     archivCar(num) {
-        this.listVoiture[this.knowCar(num)].archivCar() ;
-        //this.listVoiture = this.listVoiture.filter((car) => car.plaque != num);
+        this.listVoiture[this.knowCar(num)].archive() ;
     }
 
     aPayer(num) {

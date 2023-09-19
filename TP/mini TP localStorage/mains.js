@@ -76,7 +76,6 @@ function saveList() {
 }
 
 function btnAddAdd() {
-    console.log("btnAddAdd here");
     maListDeCourse.push({ind : compt++ , item : itemCourse.value});
     saveList();
 }
@@ -102,7 +101,6 @@ function reset() {
 
 function editItem(ind) {
     let i = maListDeCourse.findIndex((course) => course.ind == ind );
-    console.log(i);
     itemCourse.value = maListDeCourse[i].item ;
     btnAdd.setAttribute("onclick", `btnAddEdit(${i})`);
 }

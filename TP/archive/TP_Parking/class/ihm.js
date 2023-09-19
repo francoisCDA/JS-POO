@@ -16,14 +16,13 @@ export class Ihm {
 
         let retClient = document.getElementById('retourClient');
 
-        retClient.className = `bg-${bsColor} bg-opacity-50 text-${bsColor} text-center`;
+        retClient.className = `bg-${bsColor} bg-opacity-25 text-center`;
         if (text) { retClient.innerHTML = `<pan>${text}<span>`; } ;
         setTimeout(() => {
             document.getElementById('immatriculation').value ='';
             retClient.className = 'd-none';
             btns.forEach(element => element.disabled = false );
-
-        }, 5000);
+        }, 2000); // normalement c'est 5000
     }
 
     static chkFormat(plaque) {
