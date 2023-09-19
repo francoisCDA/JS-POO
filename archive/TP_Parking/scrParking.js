@@ -11,7 +11,7 @@ btnPayer.addEventListener("click", () => {
         if (numPlaque) {
             if (parking.knowCar(numPlaque) >= 0) {
                 Ihm.affichMessage(`Le prix à payer pour le véhicule ${numPlaque} est de ${parking.aPayer(numPlaque)}€`,'warning')
-                parking.delCar(numPlaque);
+                parking.archivCar(numPlaque);
             } else {
                 Ihm.affichMessage(`Aucun véhicule immatriculé ${numPlaque} enregistré !`,'danger');
             };
@@ -30,7 +30,7 @@ btnTicket.addEventListener("click", () => {
         if (numPlaque) {
             if (parking.knowCar(numPlaque) == -1) {
                 parking.addCar(numPlaque);
-                console.log(parking.listVoiture);
+                parking.updateCar(numPlaque);
                 Ihm.affichMessage(`Veuillez prendre votre ticket  pour le véhicule ${numPlaque}`,'success')
             } else {
                 Ihm.affichMessage(`Le véhicule immatriculé ${numPlaque} a déjà un ticket de parking !`,'danger');
@@ -40,5 +40,8 @@ btnTicket.addEventListener("click", () => {
     }   
 })
 
-
+// localStorage.setItem()
+// localStorage.getItem()
+// locaStorage.clear()
+// locaStorage.removeItem()
 

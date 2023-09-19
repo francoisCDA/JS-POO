@@ -6,6 +6,7 @@ export class Ihm {
            return inputNumPlaq;
        } else {
         this.affichMessage(`Veuillez saisir un numéro de plaque valide`, 'danger');
+         return false;
        };
     }
     
@@ -27,7 +28,6 @@ export class Ihm {
 
     static chkFormat(plaque) {
         let rgex = /^[A-Z]{2}[-][0-9]{3}[-][A-Z]{2}$/i ;
-        console.log(rgex.test(plaque));
         return rgex.test(plaque);
     }
 }
