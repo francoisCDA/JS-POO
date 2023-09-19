@@ -9,8 +9,10 @@ export class Parking {
 
     knowCar(num) {
         for (let i = 0 ; i < this.listVoiture.length ; i++) {
-            if (this.listVoiture[i].numPlaque == num) ;
-            return i;
+            if (this.listVoiture[i].plaque == num) {
+                return i;
+            } ;
+            
         }
         
         return -1 ;
@@ -18,6 +20,7 @@ export class Parking {
 
     addCar(num) {
         this.listVoiture.push( new Vehicule(num) );
+        console.log(this.listVoiture);
     }
 
     delCar(num) {
