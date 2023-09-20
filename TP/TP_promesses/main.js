@@ -25,6 +25,9 @@ function importPoke(nb) {
             .catch(error => {
                 console.log("PROBLEME",error);        
             })
+            .finally(() => {
+                infoPoke();
+            })
     } 
 }
 
@@ -50,5 +53,3 @@ function infoPoke(i = 0) {
     pokeInfos[2].textContent = `Taille : ${pokeDex[i].taille}`;
     pokeInfos[3].textContent = `Poids : ${pokeDex[i].poids}`;
 }
-
-setTimeout(infoPoke, 500 );
