@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <!--  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script> -->
+    <script type="module" src="./js/main.js" defer></script>
+    <title>TP-22sept</title>
+</head>
+<body>
+    <div class="container">
+        <div id="saisie">
+            <div>
+                <form action="">
+                    <label for="selectEleve">Sélectionner un élève</label>
+                    <select name="eleves" id="selectEleve">
+                        <option value="-1">-- liste vide  --</option> 
+                    
+                    </select>
+                </form>
+                <form action="">
+                    <span>Ajouter un élève :</span>
+                    <label for="inNom">Nom : </label>
+                    <input type="text" name="inNom" id="inNom">
+                    <label for="inPrenom"> Prénom</label>
+                    <input type="text" name="inPrenom" id="inPrenom">
+                    <button type="button" id="btnAddEleve">Ajouter</button>
+                </form>
+            </div>
+    
+            <div>
+                <form action="">
+                    <label for="selectMatiere">Sélectionner une matière</label>
+                    <select name="eleves" id="selectMatiere">
+                        <option value="-1">-- liste vide  --</option> 
+                    
+                    </select>
+                </form>
+                <form action="">
+                    <span>Ajouter une matière :</span>
+                    <label for="inMatiere"> Intitulé :</label>
+                    <input type="text" name="inMatiere" id="inMatiere">
+                    <button type="button" id="btnAddMatiere">Ajouter</button>
+                </form>
+            </div>
+    
+            <div>
+                <form action="">
+                    <span>Ajouter une note :</span>
+                    <label for="inNote"> Notes :</label>
+                    <input type="text" name="inNote" id="inNote">
+                    <button type="button" id="btnAddNote">Ajouter</button>
+                </form>
+            </div>
+        </div>
+
+        <div id="affichage">
+            <div id="filtres">
+                <form action="">
+                    <label for="filtreEleve">Sélectionner un élève</label>
+                    <select name="filtreEleve" id="filtreEleve">
+                        <option value="-1">-- liste vide  --</option> 
+                    
+                    </select>
+                </form>
+                <form action="">
+                    <label for="filtreMatiere">Sélectionner une matière</label>
+                    <select name="filtreMatiere" id="filtreMatiere">
+                        <option value="-1">-- liste vide  --</option> 
+                    
+                    </select>
+                </form>
+            </div>
+
+            <div id="moyenne">
+        
+            </div>
+            <div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Nom</th>
+                            <th>Prenom</th>
+                            <th>Matière</th>
+                            <th>Notes</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tableauAffichage">
+                        
+                    </tbody>
+                    </table>
+        
+            </div>
+
+        </div>
+    </div>
+
+
+
+</body>
+</html>

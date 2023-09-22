@@ -8,14 +8,8 @@ export class Eleve {
         this.matieres = [] ;
     }
 
-    addNote(matiere,note) {
-        let ind = this.matiereKnow(matiere) ;
-        if (ind > -1 ) {
-            this.matieres[ind].notes.push(note);
-        } else {
-            this.matieres.push(new Matiere(matiere, note));
-        }
-
+    addMat(nom) {
+        this.matieres.push(new Matiere(nom));
     }
 
     matieresList() {
@@ -28,10 +22,17 @@ export class Eleve {
 
     moyenne() {
         if (this.matieres.length > 0 ) {
-            let initValue = 0;
+            let somme = 0 ;
+
+            this.matieres.forEach( matiere => {
+                if (typeof matiere.moyenne() == 'number') {
+                    somme += matiere.moyenne ;
+                }
+            })
+            
             return this.matieres.reduce((somme, matiere) => somme + matiere.moyenne(), initValue) / this.matieres.length;
         } else {
-            return 0 ;
+            return ' ' ;
         }
     }
 }

@@ -1,7 +1,7 @@
 export class Matiere {
-    constructor(nom,firstNote) {
-        this.label = nom ;
-        this.notes = [firstNote] ;
+    constructor(dis) {
+        this.discipline = dis ;
+        this.notes = [] ;
     }
 
     moyenne() {
@@ -9,7 +9,7 @@ export class Matiere {
             let initValue = 0;
             return this.notes.reduce((somme, noteCourante) => somme + noteCourante, initValue) / this.notes.length;
         } else {
-            return 0 ;
+            return ' ' ;
         }
     }
 
