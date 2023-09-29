@@ -1,0 +1,18 @@
+.container {
+    display: flex; 
+    width: 80%;
+    margin: auto;
+}
+
+#saisie > div {
+    display: flex;    
+    flex-direction: column;
+}
+
+#saisie * {
+    display: block;
+}
+
+#saisie button, #saisie select {
+    margin-bottom: 15px;
+}
